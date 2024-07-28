@@ -14,6 +14,40 @@ This discrepancy between linear and road distances is evident in urban areas lik
        alt="CDMX Isochrone Example">
 </p>
 
+
+## Experimental design
+The designed expirement is very simple. For a period of 5 days, all trips in 3 cities (Bravos, Pentos and Volantis) have been randomly assigned using linear or road distance:
+1. Trips whose trip_id starts with digits 0-8 were assigned using road distance
+2. Trips whose trip_id starts with digits 9-f were assigned using linear distance
+
+
+## Data description
+The collected data is available available in the data directory. Each object represent a vehicle_interval that contains the following attributes:
+    type: can be going_to_pickup, waiting_for_rider or driving_to_destination
+    trip_id: uniquely identifies the trip
+    duration: how long the interval last, in seconds
+    distance: how far the vehicle moved in this interval, in meters
+    city_id: either bravos, pentos and volantis
+    started_at: when the interval started, UTC Time
+    vehicle_id: uniquely identifies the vehicle
+    rider_id: uniquely identifies the rider
+    
+    
+### Example
+{"duration": 857,<br>
+ "distance": 5384,<br>
+ "started_at": 1475499600.287,<br>
+ "trip_id": "c00cee6963e0dc66e50e271239426914",<br>
+ "vehicle_id": "52d38cf1a3240d5cbdcf730f2d9a47d6",<br>
+ "city_id": "pentos",<br>
+ "type": "driving_to_destination"<br>}
+
 ## Purpose
 The purpose of this analysis is to compare the effectiveness of using linear distance versus road distance for trip assignments. By understanding the differences and their impact on travel times, we can improve the efficiency of the ride-hailing app's trip assignment algorithm.
+
+
+## Challenge
+Try to answer the following questions:
+1. Should the company move towards road distance? What's the max price it would make sense to pay per query? (make all the assumptions you need, and make them explicit)
+2. How would you improve the experimental design? Would you collect any additional data?
 
