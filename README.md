@@ -22,7 +22,7 @@ The designed expirement is very simple. For a period of 5 days, all trips in 3 c
 
 
 ## Data description
-The collected data is available available in the data directory. Each object represent a vehicle_interval that contains the following attributes:
+The collected data is available available in the data directory. Each object represent a vehicle_interval that contains the following attributes:<br>
     type: can be going_to_pickup, waiting_for_rider or driving_to_destination
     trip_id: uniquely identifies the trip
     duration: how long the interval last, in seconds
