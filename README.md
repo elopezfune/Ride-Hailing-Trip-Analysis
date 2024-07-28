@@ -34,13 +34,15 @@ The collected data is available available in the data directory. Each object rep
     
     
 ### Example
-{"duration": 857,<br>
+{<br>
+ "duration": 857,<br>
  "distance": 5384,<br>
  "started_at": 1475499600.287,<br>
  "trip_id": "c00cee6963e0dc66e50e271239426914",<br>
  "vehicle_id": "52d38cf1a3240d5cbdcf730f2d9a47d6",<br>
  "city_id": "pentos",<br>
- "type": "driving_to_destination"<br>}
+ "type": "driving_to_destination"<br>
+ }
 
 ## Purpose
 The purpose of this analysis is to compare the effectiveness of using linear distance versus road distance for trip assignments. By understanding the differences and their impact on travel times, we can improve the efficiency of the ride-hailing app's trip assignment algorithm.
