@@ -1,12 +1,19 @@
-# Road_vs_Linear
-Statistics on Road vs Linear distances.
+# Ride-Hailing Trip Assignment Analysis
 
-A ride hailing app currently assigns new incoming trips to the closest available vehicle. To compute such distance, the app currently computes haversine distance between the pickup point and each of the available vehicles. We refer to this distance as linear
+This Jupyter notebook analyzes the trip assignment method used by a ride-hailing app. The app currently assigns new incoming trips to the closest available vehicle using the Haversine distance, referred to as the linear distance. The [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) calculates the shortest distance over the Earth's surface between two points. However, this method does not accurately reflect actual travel times in urban environments, leading to potential inefficiencies in trip assignments.
 
-However, the expected time to reach A from B in a city is not 100% defined by Haversine distance: Cities are known to be places where huge amount of transport infrastructure (roads, highways, bridges, tunnels) is deployed to increase capacity and reduce average travel time. Interestingly, this heavy investment in infrastructure also implies that bird distance does not work so well as proxy, so the isochrones for travel time from certain location drastically differ from the perfect circle defined by bird distance, as we can see in this example from CDMX where the blue area represents that it is reachable within a 10 min drive.
+## Introduction
+In urban settings, the expected travel time from point A to point B is not solely defined by the linear (Haversine) distance. Cities are complex networks with extensive transportation infrastructure, including roads, highways, bridges, and tunnels, designed to increase capacity and reduce travel times. This infrastructure means that the bird distance (linear distance) often fails as a reliable proxy for estimating travel time.
 
-In addition to this, travel times can be drastically affected by traffic, accidents, road work...So that even if a driver is only 300m away, he might need to drive for 10 min because of road work in a bridge.
+To address this, the concept of road distance is introduced, which calculates the shortest path a vehicle would take using the road network. Road distance accounts for the actual routes vehicles must take, including turns, intersections, and specific road conditions, providing a more realistic estimate of travel time between two points.
 
-The challenge is the following:
-1. Should the company move towards road distance?
-2. How would you improve the experimental design? Would you collect any additional data?
+This discrepancy between linear and road distances is evident in urban areas like Mexico City (CDMX). In the image below, the blue area indicates regions reachable within a 10-minute drive, demonstrating how actual travel times deviate from the simplistic linear distance model.
+
+<p align="center">
+  <img src="![Mexico_DF.png](Mexico_DF.png)"
+       alt="CDMX Isochrone Example">
+</p>
+
+## Purpose
+The purpose of this analysis is to compare the effectiveness of using linear distance versus road distance for trip assignments. By understanding the differences and their impact on travel times, we can improve the efficiency of the ride-hailing app's trip assignment algorithm.
+
