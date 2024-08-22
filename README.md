@@ -1,6 +1,6 @@
 # Ride-Hailing Trip Assignment Analysis
 
-This Jupyter notebook analyzes the trip assignment method used by a ride-hailing app. The app currently assigns new incoming trips to the closest available vehicle using the Haversine distance, referred to as the linear distance. The [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) calculates the shortest distance over the Earth's surface between two points. However, this method does not accurately reflect actual travel times in urban environments, leading to potential inefficiencies in trip assignments.
+This report markdown analyzes the trip assignment method used by an hypothetical ride-hailing app. The app currently assigns new incoming trips to the closest available vehicle using the Haversine distance, referred to as the linear distance. The [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) calculates the shortest distance over the Earth's surface between two points. However, this method does not accurately reflect actual travel times in urban environments, leading to potential inefficiencies in trip assignments.
 
 ## Introduction
 In urban settings, the expected travel time from point A to point B is not solely defined by the linear (Haversine) distance. Cities are complex networks with extensive transportation infrastructure, including roads, highways, bridges, and tunnels, designed to increase capacity and reduce travel times. This infrastructure means that the bird distance (linear distance) often fails as a reliable proxy for estimating travel time.
