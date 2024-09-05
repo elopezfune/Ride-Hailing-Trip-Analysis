@@ -1,4 +1,4 @@
-# Ride-Hailing Trip Assignment Analysis
+# Ride-Hailing Trip Analysis
 
 This report markdown analyzes the trip assignment method used by an hypothetical ride-hailing app. The app currently assigns new incoming trips to the closest available vehicle using the Haversine distance, referred to as the linear distance. The [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) calculates the shortest distance over the Earth's surface between two points. However, this method does not accurately reflect actual travel times in urban environments, leading to potential inefficiencies in trip assignments.
 
