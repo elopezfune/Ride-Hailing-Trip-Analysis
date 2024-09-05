@@ -13,7 +13,7 @@ This discrepancy between linear and road distances is evident in urban areas lik
   <img src="![Mexico_DF.png](Mexico_DF.png)"
        alt="CDMX Isochrone Example">
 </p>
-
+ 
 
 ## Experimental design
 The designed expirement is very simple. For a period of 5 days, all trips in 3 cities (Bravos, Pentos and Volantis) have been randomly assigned using linear or road distance:
